@@ -833,6 +833,7 @@
     <Build Include="dbo\Synonyms\CatalystMail_CampaignJobdetails.sql" />
     <Build Include="dbo\Synonyms\CatalystMail_CampaignJobHeader.sql" />
     <Build Include="ExtendedProperties.sql" />
+    <Build Include="dbo\Stored Procedures\BD_TestProcedure_v2.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assemblies\SimMetrics.dll" />
