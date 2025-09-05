@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[EmailMatch] (
+    [Serial]                      FLOAT (53)     NULL,
+    [SID]                         FLOAT (53)     NULL,
+    [Submitted Time]              DATETIME       NULL,
+    [Completed Time]              DATETIME       NULL,
+    [Modified Time]               DATETIME       NULL,
+    [Draft]                       FLOAT (53)     NULL,
+    [IP-Adresse]                  NVARCHAR (255) NULL,
+    [UID]                         FLOAT (53)     NULL,
+    [Benutzername]                NVARCHAR (255) NULL,
+    [Vorname]                     NVARCHAR (255) NULL,
+    [Nachname]                    NVARCHAR (255) NULL,
+    [Karten-Nr# TopPharmCardPlus] NVARCHAR (255) NULL,
+    [E-Mail-Adresse]              NVARCHAR (255) NULL,
+    [Einverständniserklärung]     NVARCHAR (255) NULL,
+    [MailingListId]               FLOAT (53)     NULL,
+    [FormId]                      FLOAT (53)     NULL,
+    [FormEncoding]                NVARCHAR (255) NULL,
+    [user_id]                     VARCHAR (50)   NULL,
+    [Club_Newsletter]             VARCHAR (50)   NULL,
+    [Fashion_Newsletter]          VARCHAR (50)   NULL,
+    [Email]                       VARCHAR (80)   NULL,
+    [Opt-In]                      VARCHAR (50)   NULL,
+    [Email valid]                 VARCHAR (50)   NULL
+);
+
