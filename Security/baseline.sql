@@ -1,2 +1,2 @@
-﻿CREATE USER [baseline] FOR LOGIN [baseline];
+﻿/*CREATE USER [baseline] FOR LOGIN [baseline];*/
 
