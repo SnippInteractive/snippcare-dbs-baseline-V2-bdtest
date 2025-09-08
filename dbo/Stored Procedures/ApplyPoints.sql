@@ -22,6 +22,7 @@ BEGIN
  --8.New TrxType 'Transactions' introduced for FirstPurchase,SecondPurchase&PurcahsewithinPeriod  
  --9.Accepted Site Restriction applied on promotion value selection  
  --10. Return Message set based on Valid variables(@Valid,@validProfile,@validSegment)  
+ --New comment added as test, BD Githib integration. 
  DECLARE @PosId NVARCHAR(20) = NULL,   
    @OpId NVARCHAR(50) = NULL,   
    @PosTxnId NVARCHAR(20) = LOWER(NEWID()),  
