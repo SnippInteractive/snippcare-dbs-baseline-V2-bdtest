@@ -143,9 +143,9 @@ BEGIN
 	left join Country c on c.CountryCode = d.Country and c.ClientId = @clientId
 	ON 1 = 0
 	WHEN NOT MATCHED THEN
-	INSERT (Version, AddressTypeId, AddressStatusId, AddressLine1, AddressLine2, HouseName, HouseNumber, Street, Locality, City, County, Zip, CountryId, ValidFromDate, AddressValidStatusId,
+	INSERT (Version, AddressTypeId, AddressStatusId, AddressLine1, AddressLine2, HouseName, HouseNumber, Street, Locality, City,  Zip, CountryId, ValidFromDate, AddressValidStatusId,
 		 PostBox, PostBoxNumber, ContactDetailsId, LastUpdatedBy, LastUpdated)
-	values ( 1, @addressTypeId, @addressStatusId, AddressLine1, null, null, null, Street, null, City, null, Zip, c.Countryid, @currentDate, 
+	values ( 1, @addressTypeId, @addressStatusId, AddressLine1, null, null, null, Street, null, City,  Zip, c.Countryid, @currentDate, 
 	@addressValidStatusId,	null,null, ocd.ContactDetailsId, @adminUserId, @currentDate)
 	OUTPUT ocd.UniqueId, inserted.AddressId
 	INTO @outputAddress (UniqueId, AddressId);
