@@ -1,2 +1,2 @@
-﻿ALTER ROLE [db_owner] ADD MEMBER [baseline];
+﻿/*ALTER ROLE [db_owner] ADD MEMBER [baseline];*/
 
