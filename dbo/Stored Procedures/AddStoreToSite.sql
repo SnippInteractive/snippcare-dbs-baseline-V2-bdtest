@@ -18,6 +18,7 @@ BEGIN
 	-- Branch - US or CA Site under Root Site
 	-- Sub Branch - Group site by store id which under the Branch site
 	-- Leaf - Location Site stored under Sub-Branch Site
+	--Just added a comment for gh testing
 
     DECLARE @batchprocessAdmin INT, 
 	@StoreSiteId INT = 0,
