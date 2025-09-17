@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[RewardItems] (
+    [RewardItemId]            INT           IDENTITY (1, 1) NOT NULL,
+    [ExternalRewardRef]       VARCHAR (50)  NULL,
+    [RewardName]              VARCHAR (250) NULL,
+    [RewardItemsSuppliersID]  INT           NULL,
+    [SupplierRewardReference] VARCHAR (50)  NULL,
+    [StartDate]               DATETIME      NULL,
+    [EndDate]                 DATETIME      NULL,
+    [ShortDescription]        VARCHAR (500) NULL,
+    [LongDescription]         VARCHAR (MAX) NULL,
+    [TermsConditions]         VARCHAR (MAX) NULL,
+    [PrivacyPolicy]           VARCHAR (MAX) NULL,
+    [RedemptionDetails]       VARCHAR (MAX) NULL,
+    [CatalogSettings]         VARCHAR (MAX) NULL,
+    [Enabled]                 BIT           NULL,
+    [CreatedDate]             DATETIME      NULL,
+    [LastUpdatedDate]         DATETIME      NULL,
+    [ItemType]                VARCHAR (25)  NULL,
+    [ClientId]                INT           NULL,
+    [ItemLimitQty]            INT           NULL,
+    [ItemLimitPeriod]         VARCHAR (50)  NULL,
+    [Configuration]           VARCHAR (MAX) NULL,
+    [TimeZoneId]              INT           NULL,
+    CONSTRAINT [PK_RewardItems] PRIMARY KEY CLUSTERED ([RewardItemId] ASC),
+    CONSTRAINT [FK_RewardItems_RewardItemsSuppliers] FOREIGN KEY ([RewardItemsSuppliersID]) REFERENCES [dbo].[RewardItemsSuppliers] ([RewardItemsSuppliersID])
+);
+

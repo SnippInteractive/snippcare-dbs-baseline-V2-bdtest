@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>snippcare_dbs_baseline_upstream</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0038bfbb-ef78-45b1-8af3-438529c56250}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>snippcare_dbs_baseline_upstream</RootNamespace>
+    <AssemblyName>snippcare_dbs_baseline_upstream</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_100_CI_AI_SC_UTF8</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\TicketDocuments.sql" />
+    <Build Include="dbo\Tables\MailMerge.sql" />
+    <Build Include="dbo\Tables\ErrorCodeMessages.sql" />
+    <Build Include="dbo\Tables\TrxHeaderExtensionData.sql" />
+    <Build Include="dbo\Tables\RewardItemsCategories.sql" />
+    <Build Include="dbo\Tables\TicketPriority.sql" />
+    <Build Include="dbo\Tables\TrxPayment.sql" />
+    <Build Include="dbo\Tables\PromotionRegion.sql" />
+    <Build Include="dbo\Tables\TrxType.sql" />
+    <Build Include="dbo\Tables\NotificationType.sql" />
+    <Build Include="dbo\Tables\OAuthMembership.sql" />
+    <Build Include="dbo\Tables\TrxDetailExtensionData.sql" />
+    <Build Include="dbo\Tables\CmsSiteMapper.sql" />
+    <Build Include="dbo\Tables\PromotionLocation.sql" />
+    <Build Include="dbo\Tables\DeviceProfileTemplateType.sql" />
+    <Build Include="dbo\Tables\RewardItemsSuppliers.sql" />
+    <Build Include="dbo\Tables\AddressValidStatus.sql" />
+    <Build Include="dbo\Tables\TicketStatus.sql" />
+    <Build Include="dbo\Tables\PartialView.sql" />
+    <Build Include="dbo\Tables\TrxVoucherDetail.sql" />
+    <Build Include="dbo\Tables\ImportMemberTable.sql" />
+    <Build Include="dbo\Tables\MemberMergeConfig.sql" />
+    <Build Include="dbo\Tables\PaymentDeviceProfileTemplate.sql" />
+    <Build Include="dbo\Tables\TierAdmin.sql" />
+    <Build Include="dbo\Tables\DeviceProfile.sql" />
+    <Build Include="dbo\Tables\PromotionItem.sql" />
+    <Build Include="dbo\Tables\TicketTopic.sql" />
+    <Build Include="dbo\Tables\Permission.sql" />
+    <Build Include="dbo\Tables\DeviceProfileTemplate.sql" />
+    <Build Include="dbo\Tables\UserGoals.sql" />
+    <Build Include="dbo\Tables\EmailStatus.sql" />
+    <Build Include="dbo\Tables\GiftCardAudit.sql" />
+    <Build Include="dbo\Tables\Tier.sql" />
+    <Build Include="dbo\Tables\PointsToCashConversionUnit.sql" />
+    <Build Include="dbo\Tables\RewardItemsOptions.sql" />
+    <Build Include="dbo\Tables\PromotionMemberProfileItemType.sql" />
+    <Build Include="dbo\Tables\UserType.sql" />
+    <Build Include="dbo\Tables\TenderType.sql" />
+    <Build Include="dbo\Tables\TrxDetailStampCard.sql" />
+    <Build Include="dbo\Tables\UserSubType.sql" />
+    <Build Include="dbo\Tables\PromotionSubFamilies.sql" />
+    <Build Include="dbo\Tables\Translations.sql" />
+    <Build Include="dbo\Tables\ProductInfo.sql" />
+    <Build Include="dbo\Tables\RecurringJobs.sql" />
+    <Build Include="dbo\Tables\HtmlContent.sql" />
+    <Build Include="dbo\Tables\VoucherHtml.sql" />
+    <Build Include="dbo\Tables\TMassComm.sql" />
+    <Build Include="dbo\Tables\Account.sql" />
+    <Build Include="dbo\Tables\HtmlMessage.sql" />
+    <Build Include="dbo\Tables\TimeZone.sql" />
+    <Build Include="dbo\Tables\PromotionItemType.sql" />
+    <Build Include="dbo\Tables\Currency.sql" />
+    <Build Include="dbo\Tables\PromotionCriteria.sql" />
+    <Build Include="dbo\Tables\PromotionLoyaltyProfiles.sql" />
+    <Build Include="dbo\Tables\JobStatus.sql" />
+    <Build Include="dbo\Tables\DeviceStatus.sql" />
+    <Build Include="dbo\Tables\VoucherCodes.sql" />
+    <Build Include="dbo\Tables\PromotionOfferType.sql" />
+    <Build Include="dbo\Tables\JsonSchemaConfiguration.sql" />
+    <Build Include="dbo\Tables\VirtualStampCard.sql" />
+    <Build Include="dbo\Tables\Language.sql" />
+    <Build Include="dbo\Tables\DeviceLot.sql" />
+    <Build Include="dbo\Tables\PromotionRedemptionCount.sql" />
+    <Build Include="dbo\Tables\CheckSumAlgorithm.sql" />
+    <Build Include="dbo\Tables\PromotionSegments.sql" />
+    <Build Include="dbo\Tables\PortalConfiguration.sql" />
+    <Build Include="dbo\Tables\ShelterInfoRejectReasons.sql" />
+    <Build Include="dbo\Tables\Address.sql" />
+    <Build Include="dbo\Tables\ClassicalVoucherRedemptionCount.sql" />
+    <Build Include="dbo\Tables\PromotionSites.sql" />
+    <Build Include="dbo\Tables\ClientAuthentication.sql" />
+    <Build Include="dbo\Tables\TrxVoucher.sql" />
+    <Build Include="dbo\Tables\MailCampaign.sql" />
+    <Build Include="dbo\Tables\PromotionStampCounter.sql" />
+    <Build Include="dbo\Tables\PortalSiteNavigation.sql" />
+    <Build Include="dbo\Tables\ClientAuthorization.sql" />
+    <Build Include="dbo\Tables\PromotionThresholdType.sql" />
+    <Build Include="dbo\Tables\LotDeviceExport.sql" />
+    <Build Include="dbo\Tables\MailCampaignFrequencyType.sql" />
+    <Build Include="dbo\Tables\Region.sql" />
+    <Build Include="dbo\Tables\UIGridConfigurations.sql" />
+    <Build Include="dbo\Tables\LoyaltyCompetition.sql" />
+    <Build Include="dbo\Tables\MailCampaignTemplate.sql" />
+    <Build Include="dbo\Tables\Country.sql" />
+    <Build Include="dbo\Tables\PromotionValidation.sql" />
+    <Build Include="dbo\Tables\RegionZip.sql" />
+    <Build Include="dbo\Tables\TierQualifierItems.sql" />
+    <Build Include="dbo\Tables\LoyaltyOffers.sql" />
+    <Build Include="dbo\Tables\Updates.sql" />
+    <Build Include="dbo\Tables\PromotionValidationType.sql" />
+    <Build Include="dbo\Tables\UserDefinedSearchQuery.sql" />
+    <Build Include="dbo\Tables\Rewards.sql" />
+    <Build Include="dbo\Tables\LoyaltyProgramme.sql" />
+    <Build Include="dbo\Tables\TaskLoyaltyProfiles.sql" />
+    <Build Include="dbo\Tables\MailCampaignFrequency.sql" />
+    <Build Include="dbo\Tables\UserAddresses.sql" />
+    <Build Include="dbo\Tables\Receipt.sql" />
+    <Build Include="dbo\Tables\Translations_backup20201125.sql" />
+    <Build Include="dbo\Tables\TaskSegments.sql" />
+    <Build Include="dbo\Tables\RewardAttributeKeys.sql" />
+    <Build Include="dbo\Tables\ContactHistory.sql" />
+    <Build Include="dbo\Tables\AccountStatusTranslation.sql" />
+    <Build Include="dbo\Tables\ReceiptHeader.sql" />
+    <Build Include="dbo\Tables\CountryMobilePrefix.sql" />
+    <Build Include="dbo\Tables\UserTaskItem.sql" />
+    <Build Include="dbo\Tables\ContactSubType.sql" />
+    <Build Include="dbo\Tables\ActivityCategoryType.sql" />
+    <Build Include="dbo\Tables\AddressStatus.sql" />
+    <Build Include="dbo\Tables\ReceiptItem.sql" />
+    <Build Include="dbo\Tables\ContactType.sql" />
+    <Build Include="dbo\Tables\ActivityDefinition.sql" />
+    <Build Include="dbo\Tables\AddressType.sql" />
+    <Build Include="dbo\Tables\ReferenceDataType.sql" />
+    <Build Include="dbo\Tables\LoyaltyDeviceProfileTemplate.sql" />
+    <Build Include="dbo\Tables\PromotionItemGroup.sql" />
+    <Build Include="dbo\Tables\ActivityType.sql" />
+    <Build Include="dbo\Tables\View.sql" />
+    <Build Include="dbo\Tables\ContentType.sql" />
+    <Build Include="dbo\Tables\AddressStatusTranslation.sql" />
+    <Build Include="dbo\Tables\MailCampaignSegmentType.sql" />
+    <Build Include="dbo\Tables\Report.sql" />
+    <Build Include="dbo\Tables\ViewPartialView.sql" />
+    <Build Include="dbo\Tables\VoucherDeviceProfileTemplate.sql" />
+    <Build Include="dbo\Tables\AddressTypeTranslation.sql" />
+    <Build Include="dbo\Tables\ReportGroup.sql" />
+    <Build Include="dbo\Tables\GetAllTransactionDetailsPromotionsRowNum.sql" />
+    <Build Include="dbo\Tables\VirtualPointPromotions.sql" />
+    <Build Include="dbo\Tables\MailCampaignAdvancedSegmentType.sql" />
+    <Build Include="dbo\Tables\VoucherSubType.sql" />
+    <Build Include="dbo\Tables\CurrencyConverstion.sql" />
+    <Build Include="dbo\Tables\AddressValidStatusTranslation.sql" />
+    <Build Include="dbo\Tables\ReportGroupDetails.sql" />
+    <Build Include="dbo\Tables\VoucherProfileItem.sql" />
+    <Build Include="dbo\Tables\DeviceExpirationPolicy.sql" />
+    <Build Include="dbo\Tables\DBVersion.sql" />
+    <Build Include="dbo\Tables\Application.sql" />
+    <Build Include="dbo\Tables\Site.sql" />
+    <Build Include="dbo\Tables\MailCampaignSegment.sql" />
+    <Build Include="dbo\Tables\ReportGroupRole.sql" />
+    <Build Include="dbo\Tables\VoucherSegments.sql" />
+    <Build Include="dbo\Tables\DeviceLotDeviceProfile.sql" />
+    <Build Include="dbo\Tables\ReportParameter.sql" />
+    <Build Include="dbo\Tables\ManualClaimType.sql" />
+    <Build Include="dbo\Tables\BrandLoyaltyConfiguration.sql" />
+    <Build Include="dbo\Tables\Operator.sql" />
+    <Build Include="dbo\Tables\ReportParameterDisplay.sql" />
+    <Build Include="dbo\Tables\Widgit.sql" />
+    <Build Include="dbo\Tables\TrxDetailItemProperties.sql" />
+    <Build Include="dbo\Tables\ManualClaimTypeTranslation.sql" />
+    <Build Include="dbo\Tables\MemberReferral.sql" />
+    <Build Include="dbo\Tables\ReportParameterType.sql" />
+    <Build Include="dbo\Tables\PromotionHitLimitType.sql" />
+    <Build Include="dbo\Tables\MemberDocument.sql" />
+    <Build Include="dbo\Tables\WidgitMetaData.sql" />
+    <Build Include="dbo\Tables\ReportParamsSelectOptions.sql" />
+    <Build Include="dbo\Tables\MemberDocumentType.sql" />
+    <Build Include="dbo\Tables\DeviceAction.sql" />
+    <Build Include="dbo\Tables\TrxPointsAgeBurned.sql" />
+    <Build Include="dbo\Tables\WidgitMetaDataTranslation.sql" />
+    <Build Include="dbo\Tables\ReportRole.sql" />
+    <Build Include="dbo\Tables\ReferenceLookup.sql" />
+    <Build Include="dbo\Tables\ReceiptItemInvalidStatus.sql" />
+    <Build Include="dbo\Tables\TrxPointsAgeEarned.sql" />
+    <Build Include="dbo\Tables\WidgitRoles.sql" />
+    <Build Include="dbo\Tables\ReportStyles.sql" />
+    <Build Include="dbo\Tables\MemberImport.sql" />
+    <Build Include="dbo\Tables\ReferenceLookupi8n.sql" />
+    <Build Include="dbo\Tables\DeviceBlockReason.sql" />
+    <Build Include="dbo\Tables\WidgitValidValues.sql" />
+    <Build Include="dbo\Tables\CalculateLoyaltyInfo.sql" />
+    <Build Include="dbo\Tables\TrxPointsAgeExpiry.sql" />
+    <Build Include="dbo\Tables\receiptimageurl.sql" />
+    <Build Include="dbo\Tables\Reservation.sql" />
+    <Build Include="dbo\Tables\TrxPointsAgePriority.sql" />
+    <Build Include="dbo\Tables\WidgitValidValuesTranslation.sql" />
+    <Build Include="dbo\Tables\Audit.sql" />
+    <Build Include="dbo\Tables\TrxStatus.sql" />
+    <Build Include="dbo\Tables\ReservationStatus.sql" />
+    <Build Include="dbo\Tables\DeviceCategory.sql" />
+    <Build Include="dbo\Tables\AuditRequest.sql" />
+    <Build Include="dbo\Tables\ReservationType.sql" />
+    <Build Include="dbo\Tables\MemberMergeHistory.sql" />
+    <Build Include="dbo\Tables\AspNet_SqlCacheTablesForChangeNotification.sql" />
+    <Build Include="dbo\Tables\SiteStatus.sql" />
+    <Build Include="dbo\Tables\PunchTrxType.sql" />
+    <Build Include="dbo\Tables\BirthdayAdmin.sql" />
+    <Build Include="dbo\Tables\UserProfileExtraInfo.sql" />
+    <Build Include="dbo\Tables\ActivityCategory.sql" />
+    <Build Include="dbo\Tables\SiteType.sql" />
+    <Build Include="dbo\Tables\Role.sql" />
+    <Build Include="dbo\Tables\CalculateLoyaltyOffer.sql" />
+    <Build Include="dbo\Tables\TrxHeader.sql" />
+    <Build Include="dbo\Tables\BirthdayContactType.sql" />
+    <Build Include="dbo\Tables\PromotionCategoryType.sql" />
+    <Build Include="dbo\Tables\DeviceLotStatus.sql" />
+    <Build Include="dbo\Tables\RoleModule.sql" />
+    <Build Include="dbo\Tables\PromotionCategory.sql" />
+    <Build Include="dbo\Tables\DeviceType.sql" />
+    <Build Include="dbo\Tables\MemberPromotion.sql" />
+    <Build Include="dbo\Tables\DeviceNumberGeneratorTemplate.sql" />
+    <Build Include="dbo\Tables\CommunicationPlaceholderMapping.sql" />
+    <Build Include="dbo\Tables\RoleModuleActions.sql" />
+    <Build Include="dbo\Tables\BonusRedemptionAdmin.sql" />
+    <Build Include="dbo\Tables\AccountStatus.sql" />
+    <Build Include="dbo\Tables\ApiErrorLog.sql" />
+    <Build Include="dbo\Tables\MemberPromotionItemTrxHeader.sql" />
+    <Build Include="dbo\Tables\WidgitPublishStatus.sql" />
+    <Build Include="dbo\Tables\PromotionHtml.sql" />
+    <Build Include="dbo\Tables\RolePermissions.sql" />
+    <Build Include="dbo\Tables\UserNotificationHistory.sql" />
+    <Build Include="dbo\Tables\DeviceNumberGeneratorTemplateStatus.sql" />
+    <Build Include="dbo\Tables\BulkGiftCardActivations.sql" />
+    <Build Include="dbo\Tables\DeviceProfileExpirationType.sql" />
+    <Build Include="dbo\Tables\RoleTranslation.sql" />
+    <Build Include="dbo\Tables\MemberPromotionValidation.sql" />
+    <Build Include="dbo\Tables\DeviceNumberPool.sql" />
+    <Build Include="dbo\Tables\BulkGiftCardActivationsStatus.sql" />
+    <Build Include="dbo\Tables\DeviceProfileStatus.sql" />
+    <Build Include="dbo\Tables\MembershipApplication.sql" />
+    <Build Include="dbo\Tables\TranslationCopy.sql" />
+    <Build Include="dbo\Tables\CallContext.sql" />
+    <Build Include="dbo\Tables\DeviceProfileTemplateStatus.sql" />
+    <Build Include="dbo\Tables\Scheduler.sql" />
+    <Build Include="dbo\Tables\DeviceNumberStatus.sql" />
+    <Build Include="dbo\Tables\PromotionMemberProfileItem.sql" />
+    <Build Include="dbo\Tables\FinancialDeviceProfileTemplate.sql" />
+    <Build Include="dbo\Tables\DevicePoolMetadata.sql" />
+    <Build Include="dbo\Tables\DeviceExpirationPolicyType.sql" />
+    <Build Include="dbo\Tables\Promotion.sql" />
+    <Build Include="dbo\Tables\DeviceProfileChargeFee.sql" />
+    <Build Include="dbo\Tables\NotificationTemplateType.sql" />
+    <Build Include="dbo\Tables\PointsCalculationRuleType.sql" />
+    <Build Include="dbo\Tables\DeviceProfileChargeFeeType.sql" />
+    <Build Include="dbo\Tables\DeviceProfileClientRestrictions.sql" />
+    <Build Include="dbo\Tables\UserPets.sql" />
+    <Build Include="dbo\Tables\DeviceProfileExpirationTrxTypes.sql" />
+    <Build Include="dbo\Tables\ClientConfig.sql" />
+    <Build Include="dbo\Tables\SegmentAdmin.sql" />
+    <Build Include="dbo\Tables\DeviceProfileTemplateOnlineSites.sql" />
+    <Build Include="dbo\Tables\NotificationTemplate.sql" />
+    <Build Include="dbo\Tables\Module.sql" />
+    <Build Include="dbo\Tables\NotificationStatus.sql" />
+    <Build Include="dbo\Tables\SegmentUsers.sql" />
+    <Build Include="dbo\Tables\DeviceProfileTemplateSite.sql" />
+    <Build Include="dbo\Tables\tempPortalSiteNavigation20250311.sql" />
+    <Build Include="dbo\Tables\ModuleActions.sql" />
+    <Build Include="dbo\Tables\PromotionTasks.sql" />
+    <Build Include="dbo\Tables\UserStatus.sql" />
+    <Build Include="dbo\Tables\UserContactDetails.sql" />
+    <Build Include="dbo\Tables\SiteAuthentication.sql" />
+    <Build Include="dbo\Tables\Nationality.sql" />
+    <Build Include="dbo\Tables\DeviceStatusHistory.sql" />
+    <Build Include="dbo\Tables\UserLoyaltyData.sql" />
+    <Build Include="dbo\Tables\TierType.sql" />
+    <Build Include="dbo\Tables\DeviceStatusTransitionType.sql" />
+    <Build Include="dbo\Tables\PersonalDetails.sql" />
+    <Build Include="dbo\Tables\UserLoyaltyExtensionData.sql" />
+    <Build Include="dbo\Tables\NewsLetter.sql" />
+    <Build Include="dbo\Tables\PromotionTasksItem.sql" />
+    <Build Include="dbo\Tables\TierLinkType.sql" />
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\Community.sql" />
+    <Build Include="dbo\Tables\NLog_Error.sql" />
+    <Build Include="dbo\Tables\TierDurationType.sql" />
+    <Build Include="dbo\Tables\State.sql" />
+    <Build Include="dbo\Tables\GenderType.sql" />
+    <Build Include="dbo\Tables\TaskType.sql" />
+    <Build Include="dbo\Tables\ContactDetails.sql" />
+    <Build Include="dbo\Tables\ProductFamilySubType.sql" />
+    <Build Include="dbo\Tables\ELMAH_Error.sql" />
+    <Build Include="dbo\Tables\SysuserLog.sql" />
+    <Build Include="dbo\Tables\Device.sql" />
+    <Build Include="dbo\Tables\ContactDetailsType.sql" />
+    <Build Include="dbo\Tables\ProductFamilyType.sql" />
+    <Build Include="dbo\Tables\SysuserRole.sql" />
+    <Build Include="dbo\Tables\TrxDetail.sql" />
+    <Build Include="dbo\Tables\EmailProfile.sql" />
+    <Build Include="dbo\Tables\SalutationType.sql" />
+    <Build Include="dbo\Tables\PromotionProductFamilies.sql" />
+    <Build Include="dbo\Tables\EmbossLine.sql" />
+    <Build Include="dbo\Tables\MemberLink.sql" />
+    <Build Include="dbo\Tables\VoucherProductFamilies.sql" />
+    <Build Include="dbo\Tables\TrxDetailPromotion.sql" />
+    <Build Include="dbo\Tables\MemberMasterData.sql" />
+    <Build Include="dbo\Tables\Ticket.sql" />
+    <Build Include="dbo\Tables\promotionitem_backup.sql" />
+    <Build Include="dbo\Tables\EmbossLineContent.sql" />
+    <Build Include="dbo\Tables\MemberLinkType.sql" />
+    <Build Include="dbo\Tables\TierUsers.sql" />
+    <Build Include="dbo\Tables\Client.sql" />
+    <Build Include="dbo\Tables\RewardCategory.sql" />
+    <Build Include="dbo\Tables\TicketComments.sql" />
+    <Build Include="dbo\Tables\EmbossLineSetting.sql" />
+    <Build Include="dbo\Tables\TitleType.sql" />
+    <Build Include="dbo\Tables\RewardItems.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SimMetrics">
+      <HintPath>Assemblies\SimMetrics.dll</HintPath>
+      <SqlAssemblyName>SimMetrics</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+    <Reference Include="TextFunctions">
+      <HintPath>Assemblies\TextFunctions.dll</HintPath>
+      <SqlAssemblyName>TextFunctions</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+    <Reference Include="SwissPost.ie2020Insights.System">
+      <HintPath>Assemblies\SwissPost.ie2020Insights.System.dll</HintPath>
+      <SqlAssemblyName>SwissPost.ie2020Insights.System</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+    <Reference Include="SQLExtensions">
+      <HintPath>Assemblies\SQLExtensions.dll</HintPath>
+      <SqlAssemblyName>SQLExtensions</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+    <Reference Include="GroupConcat">
+      <HintPath>Assemblies\GroupConcat.dll</HintPath>
+      <SqlAssemblyName>GroupConcat</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+  </ItemGroup>
+</Project>

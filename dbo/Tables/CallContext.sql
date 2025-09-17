@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[CallContext] (
+    [Id]                     UNIQUEIDENTIFIER NOT NULL,
+    [Version]                INT              CONSTRAINT [DF_CallContext_Version] DEFAULT ((0)) NOT NULL,
+    [Origin]                 VARCHAR (50)     NULL,
+    [ClientId]               INT              NOT NULL,
+    [SiteRef]                VARCHAR (50)     NULL,
+    [SiteId]                 INT              NULL,
+    [UserId]                 INT              NULL,
+    [TerminalId]             VARCHAR (50)     NULL,
+    [RequestDateTime]        DATETIME         CONSTRAINT [DF_CallContext_RequestDateTime] DEFAULT (getdate()) NOT NULL,
+    [Created]                DATETIME         CONSTRAINT [DF_CallContext_Created] DEFAULT (getdate()) NOT NULL,
+    [CatalystAgent]          VARCHAR (50)     NULL,
+    [ExternalOperationRefId] VARCHAR (50)     NULL,
+    [ExternalUserId]         VARCHAR (100)    NULL,
+    [ExtraInfo]              VARCHAR (50)     NULL,
+    [TrxIdRef]               VARCHAR (50)     NULL,
+    [Username]               VARCHAR (50)     NULL,
+    [StartTime]              DATETIME         DEFAULT (getdate()) NULL,
+    [EndTime]                DATETIME         DEFAULT (getdate()) NULL,
+    CONSTRAINT [PK_CallContext] PRIMARY KEY CLUSTERED ([Id] ASC) WITH (FILLFACTOR = 100),
+    CONSTRAINT [FK_CallContext_ClientId] FOREIGN KEY ([ClientId]) REFERENCES [dbo].[Client] ([ClientId]),
+    CONSTRAINT [FK_CallContext_SiteId] FOREIGN KEY ([SiteId]) REFERENCES [dbo].[Site] ([SiteId]),
+    CONSTRAINT [FK_CallContext_User] FOREIGN KEY ([UserId]) REFERENCES [dbo].[User] ([UserId])
+);
+
