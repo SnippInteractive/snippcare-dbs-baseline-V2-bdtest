@@ -14,6 +14,7 @@
     [CurrencyId]            INT             NULL,
     [OLD_MemberID]          INT             NULL,
     [RunningBasePointTotal] DECIMAL (18, 2) NULL,
+     [shurimaarandomcolumn] int null,
     CONSTRAINT [PK_Account] PRIMARY KEY CLUSTERED ([AccountId] ASC) WITH (FILLFACTOR = 95, STATISTICS_NORECOMPUTE = ON),
     CONSTRAINT [FK_Account_AccountStatusType] FOREIGN KEY ([AccountStatusTypeId]) REFERENCES [dbo].[AccountStatus] ([AccountStatusId]),
     CONSTRAINT [FK_Account_Currency] FOREIGN KEY ([CurrencyId]) REFERENCES [dbo].[Currency] ([Id]),
