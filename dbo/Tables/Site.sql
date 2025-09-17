@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Site] (
     [SiteId]                INT             IDENTITY (1, 1) NOT NULL,
     [Version]               INT             CONSTRAINT [DF_Site_Version] DEFAULT ((0)) NOT NULL,
-    [Name]                  NVARCHAR (250)  NULL,
+    [Name]                  VARCHAR (250)   NULL,
     [ParentId]              INT             NULL,
     [SiteStatusId]          INT             NOT NULL,
     [SiteTypeId]            INT             NOT NULL,
@@ -21,15 +21,15 @@
     [OLD_SiteID]            INT             NULL,
     [PointsToCashThreshold] DECIMAL (18, 2) NULL,
     [ApplicationFormId]     SMALLINT        CONSTRAINT [DF_ApplicationFormId] DEFAULT ((3)) NULL,
-    [CommunicationName]     NVARCHAR (250)  NULL,
-    [SmallLogoUrl]          NVARCHAR (500)  NULL,
-    [MediumLogoUrl]         NVARCHAR (500)  NULL,
-    [LargeLogoUrl]          NVARCHAR (500)  NULL,
-    [OwnerImageUrl]         NVARCHAR (500)  NULL,
-    [ExtraInfo]             NVARCHAR (1000) NULL,
-    [Manager]               NVARCHAR (100)  NULL,
-    [WebPageUrl]            NVARCHAR (300)  NULL,
-    [SocialMediaUrls]       NVARCHAR (500)  NULL,
+    [CommunicationName]     VARCHAR (250)   NULL,
+    [SmallLogoUrl]          VARCHAR (500)   NULL,
+    [MediumLogoUrl]         VARCHAR (500)   NULL,
+    [LargeLogoUrl]          VARCHAR (500)   NULL,
+    [OwnerImageUrl]         VARCHAR (500)   NULL,
+    [ExtraInfo]             VARCHAR (1000)  NULL,
+    [Manager]               VARCHAR (100)   NULL,
+    [WebPageUrl]            VARCHAR (300)   NULL,
+    [SocialMediaUrls]       VARCHAR (500)   NULL,
     CONSTRAINT [PK_Site_1] PRIMARY KEY CLUSTERED ([SiteId] ASC) WITH (FILLFACTOR = 95),
     CONSTRAINT [FK_Site_Address] FOREIGN KEY ([AddressId]) REFERENCES [dbo].[Address] ([AddressId]),
     CONSTRAINT [FK_Site_Client1] FOREIGN KEY ([ClientId]) REFERENCES [dbo].[Client] ([ClientId]),
@@ -46,4 +46,9 @@
 
 GO
 ALTER TABLE [dbo].[Site] ENABLE CHANGE_TRACKING WITH (TRACK_COLUMNS_UPDATED = ON);
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [UK_Client_SiteRef]
+    ON [dbo].[Site]([ClientId] ASC, [SiteRef] ASC) WITH (FILLFACTOR = 95);
 

@@ -5,8 +5,8 @@
     [Display]      BIT          NOT NULL,
     [CountryId]    INT          NULL,
     [Name]         VARCHAR (50) NULL,
-    [StateCode]    NVARCHAR (3) NULL,
-    [LanguageCode] NVARCHAR (3) DEFAULT ('en') NULL,
+    [StateCode]    VARCHAR (3)  NULL,
+    [LanguageCode] VARCHAR (3)  CONSTRAINT [DF__State__LanguageC__6A1C8307] DEFAULT ('en') NULL,
     CONSTRAINT [PK_State] PRIMARY KEY CLUSTERED ([StateId] ASC),
     CONSTRAINT [FK_CountryCounty_] FOREIGN KEY ([CountryId]) REFERENCES [dbo].[Country] ([CountryId]),
     CONSTRAINT [FK_State_Client] FOREIGN KEY ([ClientId]) REFERENCES [dbo].[Client] ([ClientId])

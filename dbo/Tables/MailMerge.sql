@@ -7,7 +7,7 @@
     [CreatedBy]   INT           NOT NULL,
     [UpdatedOn]   DATETIME      NOT NULL,
     [UpdatedBy]   INT           NOT NULL,
-    [HtmlContent] VARCHAR (MAX) NULL,
+    [HtmlContent] VARCHAR (1)   NULL,
     [ClientId]    INT           NOT NULL,
     CONSTRAINT [PK_MailMerge] PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_MailMerge_Client] FOREIGN KEY ([ClientId]) REFERENCES [dbo].[Client] ([ClientId])

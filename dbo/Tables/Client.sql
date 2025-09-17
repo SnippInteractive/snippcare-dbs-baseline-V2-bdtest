@@ -15,13 +15,13 @@
     [PhoneRegexFormat]         VARCHAR (100)    NULL,
     [ApiKey]                   UNIQUEIDENTIFIER CONSTRAINT [DF_Client_ApiKey] DEFAULT (newid()) NULL,
     [ApiSecret]                VARCHAR (50)     NULL,
-    [LeadingDigits]            NVARCHAR (20)    NULL,
+    [LeadingDigits]            VARCHAR (20)     NULL,
     [MaximumLoginAttempts]     INT              CONSTRAINT [DF_Client_MaximumLoginAttempts] DEFAULT ((-1)) NOT NULL,
     [AccountLockoutDuration]   INT              CONSTRAINT [DF_Client_AccountLockoutDuration] DEFAULT ((0)) NOT NULL,
     [ManualClaimPoints]        INT              NULL,
-    [NotificareApplicationKey] NVARCHAR (200)   NULL,
-    [NotificareMasterSecret]   NVARCHAR (200)   NULL,
-    [ExtraInfo]                NVARCHAR (MAX)   NULL,
+    [NotificareApplicationKey] VARCHAR (200)    NULL,
+    [NotificareMasterSecret]   VARCHAR (200)    NULL,
+    [ExtraInfo]                VARCHAR (MAX)    NULL,
     CONSTRAINT [PK_Client] PRIMARY KEY CLUSTERED ([ClientId] ASC) WITH (FILLFACTOR = 100)
 );
 

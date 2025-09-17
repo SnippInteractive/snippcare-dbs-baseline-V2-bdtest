@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[GiftCardAudit] (
     [AuditId]    INT            IDENTITY (1, 1) NOT NULL,
-    [DeviceId]   NVARCHAR (25)  NULL,
+    [DeviceId]   VARCHAR (25)   NULL,
     [FieldName]  VARCHAR (50)   NULL,
     [NewValue]   VARCHAR (MAX)  NULL,
     [OldValue]   VARCHAR (MAX)  NULL,

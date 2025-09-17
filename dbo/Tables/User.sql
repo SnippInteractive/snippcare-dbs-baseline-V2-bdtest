@@ -4,7 +4,7 @@
     [UserTypeId]                      INT                NOT NULL,
     [UserSubTypeId]                   INT                NULL,
     [Username]                        NVARCHAR (80)      NULL,
-    [Password]                        NVARCHAR (100)     NULL,
+    [Password]                        VARCHAR (100)      NULL,
     [SiteId]                          INT                NOT NULL,
     [CreateDate]                      DATETIME           NOT NULL,
     [FirstLoginDate]                  DATETIME           NULL,
@@ -13,9 +13,9 @@
     [UserStatusId]                    INT                NOT NULL,
     [PersonalDetailsId]               INT                NULL,
     [UserLoyaltyDataId]               INT                NULL,
-    [Notes]                           NVARCHAR (MAX)     NULL,
-    [ExtReference]                    NVARCHAR (50)      NULL,
-    [LegacyNumber]                    NVARCHAR (25)      NULL,
+    [Notes]                           VARCHAR (MAX)      NULL,
+    [ExtReference]                    VARCHAR (50)       NULL,
+    [LegacyNumber]                    VARCHAR (25)       NULL,
     [LanguageId]                      INT                NOT NULL,
     [ContactByEmail]                  INT                NULL,
     [ContactByMail]                   INT                NULL,
@@ -25,7 +25,7 @@
     [LastUpdatedDate]                 DATETIME           NULL,
     [UserStatusChangedDate]           DATETIME           NULL,
     [ValidationCodeExpirationDate]    DATETIME           NULL,
-    [ValidationCode]                  NVARCHAR (100)     NULL,
+    [ValidationCode]                  VARCHAR (100)      NULL,
     [EmailAddressAuthenticated]       BIT                NULL,
     [AccActivationReminderSentOn]     DATETIMEOFFSET (7) NULL,
     [ApplicationId]                   INT                NULL,
@@ -37,8 +37,8 @@
     [DuplicateDate]                   DATETIME           NULL,
     [PreferredContactTypeId]          INT                NULL,
     [MemberSegmentTypeId]             INT                NULL,
-    [Region]                          NVARCHAR (50)      NULL,
-    [Recruiter]                       NVARCHAR (50)      NULL,
+    [Region]                          VARCHAR (50)       NULL,
+    [Recruiter]                       VARCHAR (50)       NULL,
     [Magazine]                        INT                NULL,
     [LastUpdatedBySiteId]             INT                NULL,
     [NameIdentifier]                  VARCHAR (36)       NULL,
@@ -77,6 +77,17 @@ CREATE NONCLUSTERED INDEX [IX_User_SiteId_PersonalDetailsId]
 
 
 GO
+CREATE NONCLUSTERED INDEX [IDX_User_UserType_UserStatus]
+    ON [dbo].[User]([UserTypeId] ASC, [UserStatusId] ASC)
+    INCLUDE([Username]);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_User_Username]
+    ON [dbo].[User]([Username] ASC);
+
+
+GO
 CREATE NONCLUSTERED INDEX [IX_User_UserStatusId]
     ON [dbo].[User]([UserStatusId] ASC)
     INCLUDE([UserId], [UserTypeId], [SiteId], [PersonalDetailsId]);
@@ -95,8 +106,18 @@ CREATE NONCLUSTERED INDEX [IX_User_UserSubTypeId_UserStatusId]
 
 
 GO
+CREATE NONCLUSTERED INDEX [IX_User_Username_UserId]
+    ON [dbo].[User]([Username] ASC, [UserId] ASC);
+
+
+GO
 CREATE NONCLUSTERED INDEX [NonClusteredIndex-20171005-134019]
     ON [dbo].[User]([PersonalDetailsId] ASC) WITH (FILLFACTOR = 95);
+
+
+GO
+CREATE NONCLUSTERED INDEX [User_Username]
+    ON [dbo].[User]([Username] ASC);
 
 
 GO

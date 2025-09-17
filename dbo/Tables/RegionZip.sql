@@ -1,12 +1,12 @@
 ﻿CREATE TABLE [dbo].[RegionZip] (
-    [RegionZipID] INT            IDENTITY (1, 1) NOT NULL,
-    [ClientID]    INT            NULL,
-    [ZipCode]     NVARCHAR (10)  COLLATE Latin1_General_CI_AS NULL,
-    [City]        NVARCHAR (100) NULL,
-    [State]       NVARCHAR (2)   NULL,
-    [StateName]   NVARCHAR (100) NULL,
-    [CountryCode] NVARCHAR (2)   NULL,
-    [Region]      NVARCHAR (100) NULL
+    [RegionZipID] INT           IDENTITY (1, 1) NOT NULL,
+    [ClientID]    INT           NULL,
+    [ZipCode]     VARCHAR (10)  NULL,
+    [City]        VARCHAR (100) NULL,
+    [State]       VARCHAR (2)   NULL,
+    [StateName]   VARCHAR (100) NULL,
+    [CountryCode] VARCHAR (2)   NULL,
+    [Region]      VARCHAR (100) NULL
 );
 
 

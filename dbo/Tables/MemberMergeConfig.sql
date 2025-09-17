@@ -17,6 +17,19 @@
     [ScoreExactZip]             FLOAT (53) DEFAULT ((0)) NOT NULL,
     [ScorePartialZip]           FLOAT (53) DEFAULT ((0)) NOT NULL,
     PRIMARY KEY CLUSTERED ([MemberMergeConfigId] ASC),
-    CHECK ([ScorePartialStreet]>=(0) AND [ScorePartialStreet]<=[ScoreExactStreet])
+    CONSTRAINT [CK__MemberMer__MinAc__0B879873] CHECK ([MinActualDupLevel]>=(0) AND [MinActualDupLevel]<=(100)),
+    CONSTRAINT [CK__MemberMer__MinPo__0C7BBCAC] CHECK ([MinPotentialDupLevel]>=(0) AND [MinPotentialDupLevel]<=(100)),
+    CONSTRAINT [CK__MemberMer__Score__0D6FE0E5] CHECK ([ScoreDateOfBirth]>=(0) AND [ScoreDateOfBirth]<=(100)),
+    CONSTRAINT [CK__MemberMer__Score__0E64051E] CHECK ([ScoreExactCity]>=(0) AND [ScoreExactCity]<=(100)),
+    CONSTRAINT [CK__MemberMer__Score__0F582957] CHECK ([ScoreExactFirstname]>=(0) AND [ScoreExactFirstname]<=(100)),
+    CONSTRAINT [CK__MemberMer__Score__104C4D90] CHECK ([ScoreExactHouseNumber]>=(0) AND [ScoreExactHouseNumber]<=(100)),
+    CONSTRAINT [CK__MemberMer__Score__114071C9] CHECK ([ScoreExactLastname]>=(0) AND [ScoreExactLastname]<=(100)),
+    CONSTRAINT [CK__MemberMer__Score__12349602] CHECK ([ScoreExactStreet]>=(0) AND [ScoreExactStreet]<=(100)),
+    CONSTRAINT [CK__MemberMergeConfi__1328BA3B] CHECK ([ScoreFirstLetterFirstname]>=(0) AND [ScoreFirstLetterFirstname]<=[ScoreExactFirstname]),
+    CONSTRAINT [CK__MemberMergeConfi__141CDE74] CHECK ([ScorePartialCity]>=(0) AND [ScorePartialCity]<=[ScoreExactCity]),
+    CONSTRAINT [CK__MemberMergeConfi__151102AD] CHECK ([ScorePartialFirstname]>=(0) AND [ScorePartialFirstname]<=[ScoreExactFirstname]),
+    CONSTRAINT [CK__MemberMergeConfi__160526E6] CHECK ([ScorePartialHouseNumber]>=(0) AND [ScorePartialHouseNumber]<=[ScoreExactHouseNumber]),
+    CONSTRAINT [CK__MemberMergeConfi__16F94B1F] CHECK ([ScorePartialLastname]>=(0) AND [ScorePartialLastname]<=[ScoreExactLastname]),
+    CONSTRAINT [CK__MemberMergeConfi__17ED6F58] CHECK ([ScorePartialStreet]>=(0) AND [ScorePartialStreet]<=[ScoreExactStreet])
 );
 

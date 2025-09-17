@@ -9,3 +9,9 @@
     CONSTRAINT [FK_SysuserLog_Sysuserid] FOREIGN KEY ([Sysuserid]) REFERENCES [dbo].[User] ([UserId])
 );
 
+
+GO
+CREATE NONCLUSTERED INDEX [Entity_DateTime]
+    ON [dbo].[SysuserLog]([Datetime] ASC, [Entity] ASC)
+    INCLUDE([Entity_Id]) WITH (FILLFACTOR = 100);
+

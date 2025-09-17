@@ -15,8 +15,8 @@
     [LastUpdatedDate]  DATETIMEOFFSET (7) NULL,
     [Version]          INT                NULL,
     [SnippUserId]      INT                NULL,
-    [ExtraInfo]        NVARCHAR (MAX)     NULL,
-    [Response]         NVARCHAR (MAX)     NULL,
+    [ExtraInfo]        VARCHAR (MAX)      NULL,
+    [Response]         VARCHAR (MAX)      NULL,
     PRIMARY KEY CLUSTERED ([ReceiptId] ASC)
 );
 

@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[TrxVoucher] (
     [Id]            INT            IDENTITY (1, 1) NOT NULL,
     [TrxID]         INT            NOT NULL,
-    [VoucherId]     NVARCHAR (25)  COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [VoucherId]     VARCHAR (25)   NULL,
     [Version]       INT            CONSTRAINT [DF_TrxVoucher_Version] DEFAULT ((0)) NOT NULL,
     [VoucherAmount] DECIMAL (8, 2) NULL,
     [DeviceId]      INT            NULL,

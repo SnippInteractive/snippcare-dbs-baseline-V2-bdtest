@@ -5,7 +5,7 @@
     [EndDevice]               VARCHAR (50)       NULL,
     [ActivationDate]          DATETIMEOFFSET (7) NOT NULL,
     [LoadAmount]              MONEY              NOT NULL,
-    [Reference]               NVARCHAR (250)     NULL,
+    [Reference]               VARCHAR (250)      NULL,
     [Currency]                VARCHAR (3)        NULL,
     [CreatedBy]               INT                NOT NULL,
     [LastUpdated]             DATETIMEOFFSET (7) NULL,

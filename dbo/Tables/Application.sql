@@ -1,8 +1,8 @@
 ﻿CREATE TABLE [dbo].[Application] (
-    [ApplicationId] INT           IDENTITY (1, 1) NOT NULL,
-    [Version]       INT           CONSTRAINT [DF_Application_Version] DEFAULT ((0)) NOT NULL,
-    [Name]          NVARCHAR (50) NULL,
-    [ClientId]      INT           NOT NULL,
+    [ApplicationId] INT          IDENTITY (1, 1) NOT NULL,
+    [Version]       INT          CONSTRAINT [DF_Application_Version] DEFAULT ((0)) NOT NULL,
+    [Name]          VARCHAR (50) NULL,
+    [ClientId]      INT          NOT NULL,
     CONSTRAINT [PK_Application] PRIMARY KEY CLUSTERED ([ApplicationId] ASC) WITH (FILLFACTOR = 100),
     CONSTRAINT [FK_Application_ClientId] FOREIGN KEY ([ClientId]) REFERENCES [dbo].[Client] ([ClientId])
 );

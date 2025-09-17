@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[LoyaltyCompetition] (
     [LoyaltyCompetitionId] INT                IDENTITY (1, 1) NOT NULL,
-    [Name]                 NVARCHAR (50)      NULL,
+    [Name]                 VARCHAR (50)       NULL,
     [HtmlContentId]        INT                NOT NULL,
     [LoyaltyProgramId]     INT                NOT NULL,
     [StartDateTime]        DATETIMEOFFSET (7) NULL,

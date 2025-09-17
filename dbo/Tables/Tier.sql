@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Tier] (
     [Id]                     INT             IDENTITY (1, 1) NOT NULL,
-    [Name]                   NVARCHAR (50)   NULL,
+    [Name]                   VARCHAR (50)    NULL,
     [Description]            VARCHAR (1000)  NULL,
     [EngagePointRangeFrom]   INT             NOT NULL,
     [EngagePointRangeTo]     INT             NOT NULL,

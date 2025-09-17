@@ -1,10 +1,10 @@
 ﻿CREATE TABLE [dbo].[Role] (
-    [RoleID]   INT           IDENTITY (1, 1) NOT NULL,
-    [ClientId] INT           NOT NULL,
-    [Enabled]  INT           DEFAULT ((0)) NULL,
-    [Name]     NVARCHAR (50) NULL,
-    [Version]  INT           CONSTRAINT [DF_Role_Version] DEFAULT ((0)) NOT NULL,
-    [Visible]  INT           CONSTRAINT [DF_Role_Visible] DEFAULT ((1)) NOT NULL,
+    [RoleID]   INT          IDENTITY (1, 1) NOT NULL,
+    [ClientId] INT          NOT NULL,
+    [Enabled]  INT          DEFAULT ((0)) NULL,
+    [Name]     VARCHAR (50) NULL,
+    [Version]  INT          CONSTRAINT [DF_Role_Version] DEFAULT ((0)) NOT NULL,
+    [Visible]  INT          CONSTRAINT [DF_Role_Visible] DEFAULT ((1)) NOT NULL,
     CONSTRAINT [PK_Role] PRIMARY KEY CLUSTERED ([RoleID] ASC) WITH (FILLFACTOR = 100),
     CONSTRAINT [FK_Role_Client] FOREIGN KEY ([ClientId]) REFERENCES [dbo].[Client] ([ClientId])
 );

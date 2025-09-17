@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[TrxVoucherDetail] (
     [TrxDetailId]   INT             NOT NULL,
-    [TrxVoucherId]  NVARCHAR (25)   NULL,
+    [TrxVoucherId]  VARCHAR (25)    NULL,
     [Version]       INT             CONSTRAINT [DF_TrxVoucherDetail_Version] DEFAULT ((0)) NOT NULL,
     [VoucherAmount] DECIMAL (10, 2) NULL,
     [Id]            INT             IDENTITY (1, 1) NOT NULL,

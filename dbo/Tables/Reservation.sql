@@ -14,3 +14,8 @@
     FOREIGN KEY ([UserId]) REFERENCES [dbo].[User] ([UserId])
 );
 
+
+GO
+CREATE NONCLUSTERED INDEX [IX_ReservationNumber]
+    ON [dbo].[Reservation]([ReservationNumber] ASC);
+

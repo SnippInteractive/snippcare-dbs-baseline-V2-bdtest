@@ -13,6 +13,7 @@
     [IsTier]                               BIT             CONSTRAINT [DF_LoyaltyDeviceProfileTemplate_IsTier] DEFAULT ((0)) NULL,
     [BasketMaxPointsValue]                 DECIMAL (18, 2) NULL,
     CONSTRAINT [PK_LoyaltyDeviceProfile] PRIMARY KEY CLUSTERED ([Id] ASC) WITH (FILLFACTOR = 100),
+    CONSTRAINT [CK_LoyaltyDeviceProfileTemplate_SpendToPointsConversionUnit] CHECK ([SpendToPointsConversionUnit]>(-1)),
     CONSTRAINT [FK_DeviceProfile_LoyaltyDeviceProfile] FOREIGN KEY ([Id]) REFERENCES [dbo].[DeviceProfileTemplate] ([Id]),
     CONSTRAINT [FK_LoyaltyDeviceProfileTemplate_PointsCalculationRuleType] FOREIGN KEY ([PointsCalculationRuleTypeId]) REFERENCES [dbo].[PointsCalculationRuleType] ([Id])
 );

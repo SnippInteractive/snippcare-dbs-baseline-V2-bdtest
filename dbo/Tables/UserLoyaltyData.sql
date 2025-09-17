@@ -3,7 +3,7 @@
     [Version]                  INT                CONSTRAINT [DF_UserLoyaltyData_Version] DEFAULT ((0)) NOT NULL,
     [LoyaltySignupDate]        DATETIMEOFFSET (7) NULL,
     [LoyaltyApplicationSigned] INT                NULL,
-    [Recruiter]                NVARCHAR (50)      NULL,
+    [Recruiter]                VARCHAR (50)       NULL,
     [CreatedBy]                INT                NULL,
     [LastUpdated]              DATETIMEOFFSET (7) CONSTRAINT [DF_UserLoyaltyData_LastUpdated] DEFAULT (getdate()) NOT NULL,
     [FirstReaction]            DATETIMEOFFSET (7) NULL,
